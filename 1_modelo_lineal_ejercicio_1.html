@@ -8,7 +8,7 @@
 
 <meta name="author" content="Maria Blanco">
 
-<title>Tutorial de GAMSPy: primer modelo agroeconómico en GAMSPy</title>
+<title>Ejercicio 1: Instrucciones</title>
 <style>
 
 span.smallcaps{font-variant: small-caps;}
@@ -2366,42 +2366,21 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">1</span> Introducción</a></li>
-  <li><a href="#objetivos-de-aprendizaje" id="toc-objetivos-de-aprendizaje" class="nav-link" data-scroll-target="#objetivos-de-aprendizaje"><span class="header-section-number">2</span> Objetivos de aprendizaje</a></li>
-  <li><a href="#configuración-de-este-cuaderno" id="toc-configuración-de-este-cuaderno" class="nav-link" data-scroll-target="#configuración-de-este-cuaderno"><span class="header-section-number">3</span> Configuración de este cuaderno</a></li>
-  <li><a href="#definición-y-formulación-matemática-del-primer-modelo-de-oferta-agraria" id="toc-definición-y-formulación-matemática-del-primer-modelo-de-oferta-agraria" class="nav-link" data-scroll-target="#definición-y-formulación-matemática-del-primer-modelo-de-oferta-agraria"><span class="header-section-number">4</span> Definición y formulación matemática del primer modelo de oferta agraria</a>
+  <li><a href="#instrucciones" id="toc-instrucciones" class="nav-link active" data-scroll-target="#instrucciones"><span class="header-section-number">1</span> Instrucciones</a>
   <ul class="collapse">
-  <li><a href="#enunciado-del-problema" id="toc-enunciado-del-problema" class="nav-link" data-scroll-target="#enunciado-del-problema"><span class="header-section-number">4.1</span> Enunciado del problema</a></li>
-  <li><a href="#formulación-algebraica-del-modelo-lineal" id="toc-formulación-algebraica-del-modelo-lineal" class="nav-link" data-scroll-target="#formulación-algebraica-del-modelo-lineal"><span class="header-section-number">4.2</span> Formulación algebraica del modelo lineal</a></li>
+  <li><a href="#objetivos-y-pasos-a-seguir" id="toc-objetivos-y-pasos-a-seguir" class="nav-link" data-scroll-target="#objetivos-y-pasos-a-seguir"><span class="header-section-number">1.1</span> Objetivos y pasos a seguir</a></li>
+  <li><a href="#configuración-de-este-cuaderno" id="toc-configuración-de-este-cuaderno" class="nav-link" data-scroll-target="#configuración-de-este-cuaderno"><span class="header-section-number">1.2</span> Configuración de este cuaderno</a></li>
   </ul></li>
-  <li><a href="#datos-del-primer-modelo" id="toc-datos-del-primer-modelo" class="nav-link" data-scroll-target="#datos-del-primer-modelo"><span class="header-section-number">5</span> Datos del primer modelo</a></li>
-  <li><a href="#elementos-del-modelo-en-gamspy" id="toc-elementos-del-modelo-en-gamspy" class="nav-link" data-scroll-target="#elementos-del-modelo-en-gamspy"><span class="header-section-number">6</span> Elementos del modelo en GAMSPy</a>
+  <li><a href="#definición-y-formulación-matemática-del-modelo-oferta1" id="toc-definición-y-formulación-matemática-del-modelo-oferta1" class="nav-link" data-scroll-target="#definición-y-formulación-matemática-del-modelo-oferta1"><span class="header-section-number">2</span> Definición y formulación matemática del modelo <code>oferta1</code></a>
   <ul class="collapse">
-  <li><a href="#container" id="toc-container" class="nav-link" data-scroll-target="#container"><span class="header-section-number">6.1</span> Container</a></li>
-  <li><a href="#sets" id="toc-sets" class="nav-link" data-scroll-target="#sets"><span class="header-section-number">6.2</span> Sets</a></li>
-  <li><a href="#parameters" id="toc-parameters" class="nav-link" data-scroll-target="#parameters"><span class="header-section-number">6.3</span> Parameters</a></li>
-  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="header-section-number">6.4</span> Variables</a></li>
-  <li><a href="#ecuaciones" id="toc-ecuaciones" class="nav-link" data-scroll-target="#ecuaciones"><span class="header-section-number">6.5</span> Ecuaciones</a></li>
-  <li><a href="#función-objectivo" id="toc-función-objectivo" class="nav-link" data-scroll-target="#función-objectivo"><span class="header-section-number">6.6</span> Función objectivo</a></li>
+  <li><a href="#enunciado-del-problema" id="toc-enunciado-del-problema" class="nav-link" data-scroll-target="#enunciado-del-problema"><span class="header-section-number">2.1</span> Enunciado del problema</a></li>
+  <li><a href="#formulación-algebraica-del-modelo-lineal" id="toc-formulación-algebraica-del-modelo-lineal" class="nav-link" data-scroll-target="#formulación-algebraica-del-modelo-lineal"><span class="header-section-number">2.2</span> Formulación algebraica del modelo lineal</a></li>
+  <li><a href="#datos-del-modelo-oferta1" id="toc-datos-del-modelo-oferta1" class="nav-link" data-scroll-target="#datos-del-modelo-oferta1"><span class="header-section-number">2.3</span> Datos del modelo <code>oferta1</code></a></li>
+  <li><a href="#formulación-del-modelo-en-gamspy" id="toc-formulación-del-modelo-en-gamspy" class="nav-link" data-scroll-target="#formulación-del-modelo-en-gamspy"><span class="header-section-number">2.4</span> Formulación del modelo en GAMSPy</a></li>
+  <li><a href="#resolución-del-modelo-y-parámetro-de-resultados" id="toc-resolución-del-modelo-y-parámetro-de-resultados" class="nav-link" data-scroll-target="#resolución-del-modelo-y-parámetro-de-resultados"><span class="header-section-number">2.5</span> Resolución del modelo y parámetro de resultados</a></li>
   </ul></li>
-  <li><a href="#denominación-y-definición-del-modelo" id="toc-denominación-y-definición-del-modelo" class="nav-link" data-scroll-target="#denominación-y-definición-del-modelo"><span class="header-section-number">7</span> Denominación y definición del modelo</a>
-  <ul class="collapse">
-  <li><a href="#definición-del-modelo-a-través-de-la-lista-de-ecuaciones" id="toc-definición-del-modelo-a-través-de-la-lista-de-ecuaciones" class="nav-link" data-scroll-target="#definición-del-modelo-a-través-de-la-lista-de-ecuaciones"><span class="header-section-number">7.1</span> Definición del modelo a través de la lista de ecuaciones</a></li>
-  <li><a href="#definición-del-modelo-incluyendo-todas-las-ecuaciones-del-archivo" id="toc-definición-del-modelo-incluyendo-todas-las-ecuaciones-del-archivo" class="nav-link" data-scroll-target="#definición-del-modelo-incluyendo-todas-las-ecuaciones-del-archivo"><span class="header-section-number">7.2</span> Definición del modelo incluyendo todas las ecuaciones del archivo</a></li>
-  </ul></li>
-  <li><a href="#resolución-del-modelo" id="toc-resolución-del-modelo" class="nav-link" data-scroll-target="#resolución-del-modelo"><span class="header-section-number">8</span> Resolución del modelo</a>
-  <ul class="collapse">
-  <li><a href="#comando-solve" id="toc-comando-solve" class="nav-link" data-scroll-target="#comando-solve"><span class="header-section-number">8.1</span> Comando <code>solve</code></a></li>
-  <li><a href="#chequeando-el-modelo" id="toc-chequeando-el-modelo" class="nav-link" data-scroll-target="#chequeando-el-modelo"><span class="header-section-number">8.2</span> Chequeando el modelo</a></li>
-  </ul></li>
-  <li><a href="#análisis-de-resultados-del-modelo" id="toc-análisis-de-resultados-del-modelo" class="nav-link" data-scroll-target="#análisis-de-resultados-del-modelo"><span class="header-section-number">9</span> Análisis de resultados del modelo</a>
-  <ul class="collapse">
-  <li><a href="#valores-de-las-variables-de-decisión" id="toc-valores-de-las-variables-de-decisión" class="nav-link" data-scroll-target="#valores-de-las-variables-de-decisión"><span class="header-section-number">9.1</span> Valores de las variables de decisión</a></li>
-  <li><a href="#valor-óptimo-de-la-variable-objetivo" id="toc-valor-óptimo-de-la-variable-objetivo" class="nav-link" data-scroll-target="#valor-óptimo-de-la-variable-objetivo"><span class="header-section-number">9.2</span> Valor óptimo de la variable objetivo</a></li>
-  <li><a href="#valores-de-las-restricciones-de-recursos" id="toc-valores-de-las-restricciones-de-recursos" class="nav-link" data-scroll-target="#valores-de-las-restricciones-de-recursos"><span class="header-section-number">9.3</span> Valores de las restricciones de recursos</a></li>
-  <li><a href="#parámetros-de-resultados" id="toc-parámetros-de-resultados" class="nav-link" data-scroll-target="#parámetros-de-resultados"><span class="header-section-number">9.4</span> Parámetros de resultados</a></li>
-  <li><a href="#interpretación-de-valores-marginales" id="toc-interpretación-de-valores-marginales" class="nav-link" data-scroll-target="#interpretación-de-valores-marginales"><span class="header-section-number">9.5</span> Interpretación de valores marginales</a></li>
-  </ul></li>
+  <li><a href="#definición-y-formulación-matemática-del-modelo-oferta2" id="toc-definición-y-formulación-matemática-del-modelo-oferta2" class="nav-link" data-scroll-target="#definición-y-formulación-matemática-del-modelo-oferta2"><span class="header-section-number">3</span> Definición y formulación matemática del modelo <code>oferta2</code></a></li>
+  <li><a href="#definición-y-formulación-matemática-del-modelo-oferta3" id="toc-definición-y-formulación-matemática-del-modelo-oferta3" class="nav-link" data-scroll-target="#definición-y-formulación-matemática-del-modelo-oferta3"><span class="header-section-number">4</span> Definición y formulación matemática del modelo <code>oferta3</code></a></li>
   </ul>
 </nav>
 </div>
@@ -2411,7 +2390,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial de GAMSPy: primer modelo agroeconómico en GAMSPy</h1>
+<h1 class="title">Ejercicio 1: Instrucciones</h1>
 <p class="subtitle lead">Modelo de programación lineal</p>
 </div>
 
@@ -2448,40 +2427,29 @@ window.Quarto = {
 </header>
 
 
-<section id="introducción" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">1</span> Introducción</h2>
-<p>Esta guía está diseñada para ofrecerte una introducción a la formulación de modelos de programación matemática utilizando el programa GAMS en el entorno Python, es decir, utilizando GAMSPy. El objetivo es aprender a traducir un problema agroeconómico a un lenguaje de modelización capaz de resolverlo.</p>
-<p>Para funciones más avanzadas, puedes explorar la lista de funciones completas <a href="https://gamspy.readthedocs.io/en/latest/user/index.html">user guide</a> y la extensa <a href="https://gamspy.readthedocs.io/en/latest/user/model_library.html">model library</a>.</p>
-<p>Aunque no es obligatorio, tener un conocimiento básico de programación en Python y el uso de <a href="https://pandas.pydata.org/">Pandas library</a> te facilitará seguir este tutorial.</p>
-<p>Puedes ver un ejemplo de modelo GAMS en Python en: https://gamspy.readthedocs.io/en/latest/user/notebooks/trnsport.html</p>
-<p>y en google colab: https://colab.research.google.com/github/GAMS-dev/gamspy/blob/develop/docs/user/notebooks/trnsport_colab.ipynb</p>
-</section>
-<section id="objetivos-de-aprendizaje" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="objetivos-de-aprendizaje"><span class="header-section-number">2</span> Objetivos de aprendizaje</h2>
+<section id="instrucciones" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="instrucciones"><span class="header-section-number">1</span> Instrucciones</h2>
+<section id="objetivos-y-pasos-a-seguir" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="objetivos-y-pasos-a-seguir"><span class="header-section-number">1.1</span> Objetivos y pasos a seguir</h3>
 <ol type="1">
-<li>Formular matemáticamente un modelo de optimización lineal con restricciones de recursos (modelo agroeconómico a nivel de la explotación).</li>
-<li>Implementar y resolver modelos agroeconómicos utilizando GAMSPy (GAMS para Python).</li>
-<li>Interpretar los resultados del modelo: plan de producción óptimo (valores óptimos de las variables de decisión) y valores marginales (valores duales o precios sombra) de los recursos limitados.</li>
+<li>Comprender la formulación del modelo <code>oferta1</code> que se presenta a continuación. La formulación es similar a la explicada en el Tutorial, pero las restricciones de recursos se han introducido por separado.</li>
+<li>Crear el modelo <code>oferta2</code>: <code>oferta1</code> con un cambio en la disponibilidad de trabajo, un aumento en 1 hora, para comprobar que el valor marginal del trabajo en la solución óptima mide el efecto sobre la variable objetivo de disponer de una unidad más del recurso. Generar un parámetro de resultados para comparar los resultados de <code>oferta1</code> y <code>oferta2</code>.</li>
+<li>Crear el modelo <code>oferta3</code>: <code>oferta1</code> con un cultivo adicicional (tomate), del que se conocen los datos. Generar un parámetro de resultados para comparar los resultados de <code>oferta1</code> y <code>oferta2</code>.</li>
 </ol>
 </section>
-<section id="configuración-de-este-cuaderno" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="configuración-de-este-cuaderno"><span class="header-section-number">3</span> Configuración de este cuaderno</h2>
+<section id="configuración-de-este-cuaderno" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="configuración-de-este-cuaderno"><span class="header-section-number">1.2</span> Configuración de este cuaderno</h3>
 <p>Instalación (si es necesario) y carga de GAMSPy</p>
-<div id="7d39053c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="1">
+<div id="abb6941a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalamos la librería de GAMSPy (si no está instalada): ver instrucciones de instalación en https://gamspy.readthedocs.io/en/latest/user/installation.html </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># En Google Colab siempre es necesario instalar GAMSPy &gt; para ello activamos la siguiente línea de código y ejecutamos: </span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#! pip install gamspy</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Importamos los elementos deseados de GAMSPy</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># OPCION 1: solo se importan algunos elementos (los utilizados en el modelo) &gt; activando la siguiente línea de código y ejecutando:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; from gamspy import Container, Set, Parameter, Variable, Equation, Model, Sum, Sense, Options</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># OPCION 2: se importa toda la app (recomendable para modelos grandes) </span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gamspy <span class="im">as</span> gp</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># OjO: en este caso las instrucciones cambian a gp.Container....</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Importamos GAMSPy</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gamspy <span class="im">as</span> gp</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Configuración de Python y Jupyter Notebook</p>
-<div id="4fed4572" class="cell" data-execution_count="2">
+<div id="0b74f6ec" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En Google Colab no es nedesario instalar librerías de PYTHON</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># En VS Code, es necesario instalar PYTHON si no está instalado. Si no están instaladas las librerías nbconvert o ipykernel, las instalamos. Desde el terminal:</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install pandas jupyter</span></span>
@@ -2492,206 +2460,139 @@ window.Quarto = {
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="definición-y-formulación-matemática-del-primer-modelo-de-oferta-agraria" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="definición-y-formulación-matemática-del-primer-modelo-de-oferta-agraria"><span class="header-section-number">4</span> Definición y formulación matemática del primer modelo de oferta agraria</h2>
-<section id="enunciado-del-problema" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="enunciado-del-problema"><span class="header-section-number">4.1</span> Enunciado del problema</h3>
-<p>Comenzaremos con un primer modelo de programación lineal en lenguaje GAMS : modelo lineal muy simple con únicamente dos actividades de producción y tres restricciones.</p>
-<p>Enunciado: “Un agricultor, que posee 50 hectáreas y dispone de 1800 horas de trabajo al año, puede producir dos cultivos: trigo y maíz. El trigo tiene un margen bruto de 450 euros por hectárea y el maíz de 1000 euros por hectárea. El trigo necesita 20 horas de trabajo al año y el maíz 60. El trigo necesita 2500 m<sup>3</sup> de agua de riego al año y el maíz 5000. La disponibilidad anual de agua de riego está limitada a 200000 m<sup>3</sup>. El agricultor quiere determinar el plan de producción que le permita obtener el margen global de la explotación más elevado posible”.</p>
-<p>Por consiguiente, el objetivo es encontrar la superficie a dedicar a cada cultivo de forma que el beneficio de la finca sea el máximo posible.</p>
 </section>
-<section id="formulación-algebraica-del-modelo-lineal" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="formulación-algebraica-del-modelo-lineal"><span class="header-section-number">4.2</span> Formulación algebraica del modelo lineal</h3>
+<section id="definición-y-formulación-matemática-del-modelo-oferta1" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="definición-y-formulación-matemática-del-modelo-oferta1"><span class="header-section-number">2</span> Definición y formulación matemática del modelo <code>oferta1</code></h2>
+<section id="enunciado-del-problema" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="enunciado-del-problema"><span class="header-section-number">2.1</span> Enunciado del problema</h3>
+<p>El modelo de oferta agraria <code>oferta1</code> puede describirse como: un agricultor posee 50 hectáreas, dispone de 1800 horas de trabajo al año y tiene una disponibilidad de agua anual para toda la explotación de 200000 m<sup>3</sup>. El agricultor puede elegir entre varios cultivos y conoce las necesidades de recursos por hectárea, así como otros parámetros técnico-económicos (precio, rendimiento, costes y margen bruto). El objetivo del agricultor es determinar el plan de producción que le permita obtener el máximo beneficio posible.</p>
+</section>
+<section id="formulación-algebraica-del-modelo-lineal" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="formulación-algebraica-del-modelo-lineal"><span class="header-section-number">2.2</span> Formulación algebraica del modelo lineal</h3>
 <p>Los elementos de la formulación matemática son:</p>
 <p>Índices (Sets):</p>
 <ul>
-<li><span class="math inline">\(c\)</span> = cultivos, donde <span class="math inline">\(c\)</span> = {<span class="math inline">\(trigo, maiz\)</span>}</li>
-<li><span class="math inline">\(r\)</span> = recursos, donde <span class="math inline">\(r\)</span> = {<span class="math inline">\(tierra, trabajo, agua\)</span>}</li>
+<li><span class="math inline">\(c\)</span> = cultivos</li>
+<li><span class="math inline">\(t\)</span> = técnicas</li>
 </ul>
 <p>Datos (Parameters):</p>
 <ul>
+<li><span class="math inline">\(dti\)</span> = disponibilidad de tierra (ha)</li>
+<li><span class="math inline">\(dtr\)</span> = disponibilidad de trabajo (horas)</li>
+<li><span class="math inline">\(dag\)</span> = disponibilidad de agua (miles m3)</li>
+<li><span class="math inline">\(ntr_{c}\)</span> = necesidades de trabajo del cultivo <span class="math inline">\(c\)</span> (horas/ha)</li>
+<li><span class="math inline">\(nag_{c}\)</span> = necesidades de agua del cultivo <span class="math inline">\(c\)</span> (miles m3/ha)</li>
+<li><span class="math inline">\(prec_{c}\)</span> = precio del cultivo <span class="math inline">\(c\)</span> (eur/t)</li>
+<li><span class="math inline">\(rend_{c}\)</span> = rendimiento del cultivo <span class="math inline">\(c\)</span> (t/ha)</li>
+<li><span class="math inline">\(cost_{c}\)</span> = costes directos del cultivo <span class="math inline">\(c\)</span> (t/ha)</li>
 <li><span class="math inline">\(mb_{c}\)</span> = margen bruto del cultivo <span class="math inline">\(c\)</span> (eur/ha)</li>
-<li><span class="math inline">\(d_{r}\)</span> = disponibilidad del recurso <span class="math inline">\(r\)</span> (ud)</li>
-<li><span class="math inline">\(n_{c,r}\)</span> = necesidades por unidad de cultivo <span class="math inline">\(c\)</span> del recurso <span class="math inline">\(r\)</span> (ud/ha)</li>
 </ul>
 <p>Variables de decisión:</p>
 <ul>
-<li><span class="math inline">\(x_{c}\)</span> = superficie de cultivo <span class="math inline">\(c\)</span> (ha), donde <span class="math inline">\(x_{c} \ge 0\)</span> para todo <span class="math inline">\(c\)</span></li>
+<li><span class="math inline">\(x_{c}\)</span> = superficie del cultivo <span class="math inline">\(c\)</span> (ha), donde <span class="math inline">\(x_{c} \ge 0\)</span> para todo <span class="math inline">\(c\)</span></li>
 </ul>
 <p>Variable objetivo:</p>
 <ul>
-<li><span class="math inline">\(z\)</span> = beneficio de la explotación (eur)</li>
+<li><span class="math inline">\(z\)</span> = beneficio de la explotación (euros)</li>
 </ul>
-<p>Ecuaciones:</p>
-<ul>
-<li><p>Función objetivo:   Maximizar <span class="math inline">\(z = \sum_c (mb_c \cdot x_c)\)</span></p></li>
-<li><p>Restricciones de recursos:   <span class="math inline">\(\sum_c (n_{cr} \cdot x_c) \le d_r \quad \forall r\)</span></p></li>
-<li><p>Condidiones de no-negatividad:   <span class="math inline">\(x_{c} \ge 0 \quad \forall c\)</span></p></li>
-</ul>
-<p>Por consiguiente, la formulación algebraica del problema es:</p>
+<p>La formulación algebraica del problema es:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \text{Maximizar } &amp; z = \sum_c (mb_c \cdot x_c) \\
-\text{sujeto a } &amp; \sum_c (n_{cr} \cdot x_c) \le d_r \quad \forall r \\
+\text{sujeto a } &amp; \sum_c (x_c) \le dti  \\
+     &amp; \sum_c (ntr_{c} \cdot x_c) \le dtr  \\
+     &amp; \sum_c (nag_{c} \cdot x_c) \le dag  \\
      &amp; x_{c} \ge 0 \quad \forall c
 \end{aligned}
 \]</span></p>
 </section>
-</section>
-<section id="datos-del-primer-modelo" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="datos-del-primer-modelo"><span class="header-section-number">5</span> Datos del primer modelo</h2>
+<section id="datos-del-modelo-oferta1" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="datos-del-modelo-oferta1"><span class="header-section-number">2.3</span> Datos del modelo <code>oferta1</code></h3>
 <p>Antes de formular en modelo de optimización, vamos a organizar nuestros datos utilizando <code>pandas</code>:</p>
-<p>Tabla de necesidades de recursos:</p>
-<div id="43b7f5dc" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:269}}" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Necesidades de recursos por cultivo</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>nec_recurso <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    [[<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;tierra&quot;</span>, <span class="dv">1</span>], [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;trabajo&quot;</span>, <span class="dv">20</span>], [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;agua&quot;</span>, <span class="fl">2.5</span>],</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;tierra&quot;</span>,  <span class="dv">1</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;trabajo&quot;</span>,  <span class="dv">60</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;agua&quot;</span>, <span class="fl">5.0</span>]],</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     columns<span class="op">=</span>[<span class="st">&quot;cultivo&quot;</span>, <span class="st">&quot;recurso&quot;</span>, <span class="st">&quot;valor&quot;</span>]</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>).set_index(<span class="st">&quot;cultivo&quot;</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>nec_recurso</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="9dd0ebd8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:269}}" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de necesidades de recursos por hectárea de cultivo:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>nec_recurso <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    [[<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;tierra&quot;</span>, <span class="dv">1</span>], [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;trabajo&quot;</span>, <span class="dv">20</span>], [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;agua&quot;</span>, <span class="fl">2.5</span>],</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;tierra&quot;</span>,  <span class="dv">1</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;trabajo&quot;</span>,  <span class="dv">60</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;agua&quot;</span>, <span class="fl">5.0</span>]],</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     columns<span class="op">=</span>[<span class="st">&quot;cultivo&quot;</span>, <span class="st">&quot;recurso&quot;</span>, <span class="st">&quot;valor&quot;</span>]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>).set_index(<span class="st">&quot;cultivo&quot;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de indicadores técnicos y económicos: rendimiento, precio, costes y margen bruto:</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>dat_margen <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    [[<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;precio&quot;</span>, <span class="dv">150</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;precio&quot;</span>, <span class="dv">150</span>],</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;rendim&quot;</span>,   <span class="dv">5</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;rendim&quot;</span>,  <span class="dv">10</span>],</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;costes&quot;</span>, <span class="dv">300</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;costes&quot;</span>, <span class="dv">500</span>],</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;margen&quot;</span>, <span class="dv">450</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;margen&quot;</span>, <span class="dv">1000</span>]],</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      columns<span class="op">=</span>[<span class="st">&quot;cultivo&quot;</span>, <span class="st">&quot;indicador&quot;</span>, <span class="st">&quot;valor&quot;</span>]</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>).set_index(<span class="st">&quot;cultivo&quot;</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla de disponibilidades de recursos:</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>dis_recurso <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    [[<span class="st">&quot;tierra&quot;</span>, <span class="dv">50</span>], [<span class="st">&quot;trabajo&quot;</span>, <span class="dv">1800</span>], [<span class="st">&quot;agua&quot;</span>, <span class="dv">200</span>]], columns<span class="op">=</span>[<span class="st">&quot;recurso&quot;</span>, <span class="st">&quot;dr&quot;</span>]</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>).set_index(<span class="st">&quot;recurso&quot;</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>nec_recurso, dat_margen</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">recurso</th>
-<th data-quarto-table-cell-role="th">valor</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>tierra</td>
-<td>1.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>trabajo</td>
-<td>20.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>agua</td>
-<td>2.5</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>tierra</td>
-<td>1.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>trabajo</td>
-<td>60.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>agua</td>
-<td>5.0</td>
-</tr>
-</tbody>
-</table>
-
+<pre><code>(         recurso  valor
+ cultivo                
+ trigo     tierra    1.0
+ trigo    trabajo   20.0
+ trigo       agua    2.5
+ maiz      tierra    1.0
+ maiz     trabajo   60.0
+ maiz        agua    5.0,
+         indicador  valor
+ cultivo                 
+ trigo      precio    150
+ maiz       precio    150
+ trigo      rendim      5
+ maiz       rendim     10
+ trigo      costes    300
+ maiz       costes    500
+ trigo      margen    450
+ maiz       margen   1000)</code></pre>
 </div>
 </div>
-</div>
-<p>Tabla de indicadores técnicos y económicos: rendimiento, precio, costes y margen bruto</p>
-<div id="21d23948" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:332}}" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Datos de margen por cultivo</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dat_margen <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    [[<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;precio&quot;</span>, <span class="dv">150</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;precio&quot;</span>, <span class="dv">150</span>],</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;rendim&quot;</span>,   <span class="dv">5</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;rendim&quot;</span>,  <span class="dv">10</span>],</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;costes&quot;</span>, <span class="dv">300</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;costes&quot;</span>, <span class="dv">500</span>],</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>     [<span class="st">&quot;trigo&quot;</span>, <span class="st">&quot;margen&quot;</span>, <span class="dv">450</span>], [<span class="st">&quot;maiz&quot;</span>, <span class="st">&quot;margen&quot;</span>, <span class="dv">1000</span>]],</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      columns<span class="op">=</span>[<span class="st">&quot;cultivo&quot;</span>, <span class="st">&quot;indicador&quot;</span>, <span class="st">&quot;valor&quot;</span>]</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>).set_index(<span class="st">&quot;cultivo&quot;</span>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>dat_margen</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">indicador</th>
-<th data-quarto-table-cell-role="th">valor</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>precio</td>
-<td>150</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>precio</td>
-<td>150</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>rendim</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>rendim</td>
-<td>10</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>costes</td>
-<td>300</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>costes</td>
-<td>500</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>margen</td>
-<td>450</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>margen</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>Creación de parámetros individualizados para precio, rendimiento, coste y margen:</p>
-<div id="520f4ea9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}}" data-execution_count="5">
+<p>Creación de parámetros individualizados para necesidades de recursos, precio, rendimiento, coste y margen:</p>
+<div id="0fdbeac1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}}" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tablas individualizada para cada indicador y solo con dos columnas</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>precio <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;precio&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>rendim <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;rendim&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>costes <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;costes&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>margen <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;margen&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>margen</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dat_ntr <span class="op">=</span> nec_recurso[nec_recurso[<span class="st">&quot;recurso&quot;</span>] <span class="op">==</span> <span class="st">&quot;trabajo&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;recurso&#39;</span>])</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>dat_nag <span class="op">=</span> nec_recurso[nec_recurso[<span class="st">&quot;recurso&quot;</span>] <span class="op">==</span> <span class="st">&quot;agua&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;recurso&#39;</span>])</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>dat_precio <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;precio&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>dat_rendim <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;rendim&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>dat_costes <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;costes&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>dat_margen <span class="op">=</span> dat_margen[dat_margen[<span class="st">&quot;indicador&quot;</span>] <span class="op">==</span> <span class="st">&quot;margen&quot;</span>].drop(columns<span class="op">=</span>[<span class="st">&#39;indicador&#39;</span>])</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>dat_ntr, dat_nag</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>(         valor
+ cultivo       
+ trigo     20.0
+ maiz      60.0,
+          valor
+ cultivo       
+ trigo      2.5
+ maiz       5.0)</code></pre>
+</div>
+</div>
+</section>
+<section id="formulación-del-modelo-en-gamspy" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="formulación-del-modelo-en-gamspy"><span class="header-section-number">2.4</span> Formulación del modelo en GAMSPy</h3>
+<p>El problema de oferta puede descomponerse en los siguientes bloques: conjuntos, parámetros, variables y ecuaciones. Para definir el modelo en <code>GAMSPy</code>, tenemos que declarar todos los símbolos que lo componen. Para ello, comenzamos creando un <code>container</code> que incluirá todos los elementos del modelo. A continuación, creamos los símbolos de tipo <code>set</code> (conjuntos), <code>parameter</code> (parámetros), <code>variable</code> (variables), <code>equation</code> (ecuaciones) y <code>model</code> (nombre del modelo).</p>
+<section id="introducción-de-datos" class="level4" data-number="2.4.1">
+<h4 data-number="2.4.1" class="anchored" data-anchor-id="introducción-de-datos"><span class="header-section-number">2.4.1</span> Introducción de datos</h4>
+<p>Comenzamos creando un <code>container</code> y definiendo los conjuntos (subíndices):</p>
+<div id="d33259b3" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Container: creamos un contenedor m para el modelo</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Container()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sets: definimos los conjuntos de recursos y cultivos</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> gp.Set(container<span class="op">=</span>m, name<span class="op">=</span><span class="st">&quot;c&quot;</span>, description<span class="op">=</span><span class="st">&quot;cultivos&quot;</span>, records<span class="op">=</span>dat_precio.index)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos los elementos del conjunto c</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>c.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
@@ -2700,21 +2601,20 @@ window.Quarto = {
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">valor</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">uni</th>
+<th data-quarto-table-cell-role="th">element_text</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>450</td>
+<th data-quarto-table-cell-role="th">0</th>
+<td>trigo</td>
+<td></td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>1000</td>
+<th data-quarto-table-cell-role="th">1</th>
+<td>maiz</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2722,491 +2622,37 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Tabla de disponibilidades de recursos:</p>
-<div id="8ac8c1d0" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:175}}" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dis_recurso <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    [[<span class="st">&quot;tierra&quot;</span>, <span class="dv">50</span>], [<span class="st">&quot;trabajo&quot;</span>, <span class="dv">1800</span>], [<span class="st">&quot;agua&quot;</span>, <span class="dv">200</span>]], columns<span class="op">=</span>[<span class="st">&quot;recurso&quot;</span>, <span class="st">&quot;valor&quot;</span>]</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>).set_index(<span class="st">&quot;recurso&quot;</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>dis_recurso</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">valor</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">recurso</th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">tierra</th>
-<td>50</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">trabajo</th>
-<td>1800</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">agua</th>
-<td>200</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
-<section id="elementos-del-modelo-en-gamspy" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="elementos-del-modelo-en-gamspy"><span class="header-section-number">6</span> Elementos del modelo en GAMSPy</h2>
-<p>El problema de oferta puede descomponerse en los siguientes bloques: conjuntos, parámetros, variables y ecuaciones.</p>
-<p>Para definir el modelo en <code>GAMSPy</code>, tenemos que declarar todos los símbolos que lo componen. Para ello, comenzamos creando un <code>container</code> que incluirá todos los elementos del modelo. A continuación, creamos los símbolos de tipo <code>set</code> (conjuntos), <code>parameter</code> (parámetros), <code>variable</code> (variables), <code>equation</code> (ecuaciones) y <code>model</code> (nombre del modelo).</p>
-<section id="container" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="container"><span class="header-section-number">6.1</span> Container</h3>
-<p>En primer lugar, creamos un <code>Container</code> (contenedor) para encapsular toda la información relevante de nuestro Modelo <code>GAMSPy</code>. Este <code>Container</code> actúa como un centro de información, recopilando datos esenciales, conjuntos, parámetros, variables y restricciones, proporcionando una estructura clara para nuestro problema de optimización.</p>
-<div id="821b9712" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un contenedor m para el modelo</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> gp.Container()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="sets" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="sets"><span class="header-section-number">6.2</span> Sets</h3>
-<p>Los <code>Sets</code> son uno de los bloques fundamentales de un modelo <code>GAMSPy</code>, correspondiendo a los índices de la notación algebraica. En el modelo de oferta, definimos los siguientes índices:</p>
-<ul>
-<li><span class="math inline">\(c\)</span> = cultivos</li>
-<li><span class="math inline">\(r\)</span> = recursos</li>
-</ul>
-<p>Para una guía detallada sobre el uso de Sets, consultad la <a href="https://gamspy.readthedocs.io/en/latest/user/basics/set.html">set section</a> de la guía de usuario.</p>
-<p>Hay dos formas de declarar sets:</p>
-<ol type="1">
-<li>Primero declaración y después asignación de valores en una instrucción separada.</li>
-<li>Combinar la declaración y asignación en una única instrucción.</li>
-</ol>
-<section id="declaration-y-asignación-separada" class="level4" data-number="6.2.1">
-<h4 data-number="6.2.1" class="anchored" data-anchor-id="declaration-y-asignación-separada"><span class="header-section-number">6.2.1</span> Declaration y asignación separada</h4>
-<p>Para el set <code>c</code> utilizamos la forma separada:</p>
-<div id="fab6d82b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un conjunto c de cultivos</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> gp.Set(container<span class="op">=</span>m, name<span class="op">=</span><span class="st">&quot;c&quot;</span>, description<span class="op">=</span><span class="st">&quot;cultivos&quot;</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Asignamos los elementos del conjunto c a partir del índice de la tabla margen</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>c.setRecords(margen.index)</span>
+<p>Añadimos los parámetros, con datos introducidos directamente (disponibilidad de recursos) o desde los df:</p>
+<div id="640e1699" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># PARAMETROS (desde los datos)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A nivel de finca (no tienen dimensión c,t...) </span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>dti  <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;dti&quot;</span>,  description<span class="op">=</span><span class="st">&quot;superficie explotacion (ha)&quot;</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>dtr  <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;dtr&quot;</span>, description<span class="op">=</span><span class="st">&quot;trabajo familiar anual (h)&quot;</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>dag  <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;dag&quot;</span>,  description<span class="op">=</span><span class="st">&quot;disponibilidad de agua de riego (miles m3)&quot;</span>)</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos los elementos del conjunto c</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>c.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">uni</th>
-<th data-quarto-table-cell-role="th">element_text</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>trigo</td>
-<td></td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>maiz</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
-<section id="declaración-y-asignación-combinada" class="level4" data-number="6.2.2">
-<h4 data-number="6.2.2" class="anchored" data-anchor-id="declaración-y-asignación-combinada"><span class="header-section-number">6.2.2</span> Declaración y asignación combinada</h4>
-<p>Para el set <code>r</code> utilizamos la forma combinada:</p>
-<div id="cc16ab53" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}}" data-tags="[]" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un conjunto r de recursos y asignamos los elementos del conjunto r a partir del índice de la tabla dis_recurso</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> gp.Set(container<span class="op">=</span>m, name<span class="op">=</span><span class="st">&quot;r&quot;</span>, description<span class="op">=</span><span class="st">&quot;recursos&quot;</span>, records<span class="op">=</span>dis_recurso.index)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Otra forma de asignar los elementos del conjunto r es escribirlos directamente </span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; r = gp.Set(container=m, name=&quot;r&quot;, description=&quot;recursos&quot;, records=[&quot;tierra&quot;, &quot;trabajo&quot;, &quot;agua&quot;])</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos los elementos del conjunto r</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>r.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">uni</th>
-<th data-quarto-table-cell-role="th">element_text</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>tierra</td>
-<td></td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>trabajo</td>
-<td></td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>agua</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>De esta forma, hemos definido dos <code>Set</code>, <span class="math inline">\(c\)</span> y <span class="math inline">\(r\)</span>. Es el equivalente a la notación algebraica:</p>
-<p><span class="math inline">\(c\)</span> = {<span class="math inline">\(trigo, maiz\)</span>}</p>
-<p><span class="math inline">\(r\)</span> = {<span class="math inline">\(tierra, trabajo, agua\)</span>}</p>
-<p>Además, hemos introducido la descripción de cada uno, facilitando la comprensión del código del modelo.</p>
-<p>Para visualizar el contenido de un set podemos usar <code>&lt;set name&gt;.records</code>.</p>
-<div id="1e5b80d6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos los elementos del conjunto c</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>c.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">uni</th>
-<th data-quarto-table-cell-role="th">element_text</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>trigo</td>
-<td></td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>maiz</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="parameters" class="level3" data-number="6.3">
-<h3 data-number="6.3" class="anchored" data-anchor-id="parameters"><span class="header-section-number">6.3</span> Parameters</h3>
-<p>Para declarar los parámetros, utilizamos la palabra clave <code>Parameter</code>. Cada parámetro debe tener un nombre (identificador) y puede tener una descripción. Se deben indicar las dimensiones, como en <span class="math inline">\(mb_c\)</span> donde la dimensión es <span class="math inline">\(c\)</span>. Para indicar las dimensiones, utilizamos el atributo <code>domain</code> e indicamos los <code>Set</code>correspondientes.</p>
-<p>Al igual que cuando creamos los conjuntos, para los parámetros también podemos combinar o separar los pasos de declaración y asignación. Por comodidad, procederemos combinando la declaración del parámetro y la asignación de sus datos.</p>
-<section id="introducción-directa-de-datos" class="level4" data-number="6.3.1">
-<h4 data-number="6.3.1" class="anchored" data-anchor-id="introducción-directa-de-datos"><span class="header-section-number">6.3.1</span> Introducción directa de datos</h4>
-<p>Los datos se pueden asignar directamente, a partir de una tabla de datos, o podemos calcularlos (subsección siguiente)</p>
-<div id="fcd4025f" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un parámetro  mb de margen bruto del cultivo, con dominio c y asignamos los datos a partir de la tabla margen</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>mb <span class="op">=</span> gp.Parameter(</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;mb&quot;</span>,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>c,</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;margen bruto del cultivo&quot;</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    records<span class="op">=</span>margen.reset_index(),</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Otra forma de asignar los datos del parámetro mb es escribirlos directamente</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mb = gp.Parameter(container=m, name=&quot;mb&quot;, domain=c, description=&quot;margen bruto del cultivo&quot;, records=[[&quot;trigo&quot;, 450], [&quot;maiz&quot;, 1000]])</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos los datos del parámetro mb</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>mb.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>trigo</td>
-<td>450.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>maiz</td>
-<td>1000.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="0be05cde" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}}" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un parámetro de disponibilidad de recursos, con dominio r y asignamos los datos a partir de la tabla dis_recurso</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>dr <span class="op">=</span> gp.Parameter(</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;dr&quot;</span>,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>r,</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;disponibilidad del recurso r&quot;</span>,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    records<span class="op">=</span>dis_recurso.reset_index(),</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>dr.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">recurso</th>
-<th data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>tierra</td>
-<td>50.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>trabajo</td>
-<td>1800.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>agua</td>
-<td>200.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="99dda36e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:237}}" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un parámetro de necesidades de recursos, con dominio [c,r] y asignamos los datos a partir de la tabla nec_recurso</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>nr <span class="op">=</span> gp.Parameter(</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;nr&quot;</span>,</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>[c, r],</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;necesidades del recurso r por unidad de cultivo c&quot;</span>,</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    records<span class="op">=</span>nec_recurso.reset_index(),</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>nr.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th">recurso</th>
-<th data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>trigo</td>
-<td>tierra</td>
-<td>1.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>trigo</td>
-<td>trabajo</td>
-<td>20.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>trigo</td>
-<td>agua</td>
-<td>2.5</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>maiz</td>
-<td>tierra</td>
-<td>1.0</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>maiz</td>
-<td>trabajo</td>
-<td>60.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
-<td>maiz</td>
-<td>agua</td>
-<td>5.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
-<section id="parámetros-calculados" class="level4" data-number="6.3.2">
-<h4 data-number="6.3.2" class="anchored" data-anchor-id="parámetros-calculados"><span class="header-section-number">6.3.2</span> Parámetros calculados</h4>
-<p>Hemos introducido los datos de margen directamente. Pero podría tratarse de un parámetro calculado. Por ejemplo, si nos dan los datos de precio, rendimiento y costes, podemos calcular el margen bruto como ingresos por hectárea menos costes directos por hectárea:</p>
-<div id="2152d160" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un parámetro de precio del producto, con dominio c y asignamos los datos a partir de la tabla precio</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>precio <span class="op">=</span> gp.Parameter(</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;precio&quot;</span>,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>c,</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;precio del producto (eur/ton)&quot;</span>,</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    records<span class="op">=</span>precio.reset_index(),</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>precio.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>trigo</td>
-<td>150.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>maiz</td>
-<td>150.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="1a7307bf" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un parámetro de rendimiento del cultivo, con dominio c y asignamos los datos a partir de la tabla rendim</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>rendim <span class="op">=</span> gp.Parameter(</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;rendim&quot;</span>,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>c,</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;rendimiento del cultivo (ton/ha)&quot;</span>,</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    records<span class="op">=</span>rendim.reset_index(),</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>rendim.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>trigo</td>
-<td>5.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>maiz</td>
-<td>10.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="8e741284" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos un parámetro de costes directos de producción, con dominio c y asignamos los datos a partir de la tabla costes</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>costes <span class="op">=</span> gp.Parameter(</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;costes&quot;</span>,</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>c,</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;costes directos de produccion (eur/ha)&quot;</span>,</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    records<span class="op">=</span>costes.reset_index(),</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>costes.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">cultivo</th>
-<th data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>trigo</td>
-<td>300.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>maiz</td>
-<td>500.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>Y a continuación, generamos el parámetro de margen:</p>
-<div id="de449bdf" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:112}}" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># El parámetro margen ya está creado antes en el container m: aquí lo recalculamos a partir de los parámetros precio, rendim y costes</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>mb[c] <span class="op">=</span> precio[c]<span class="op">*</span>rendim[c] <span class="op">-</span> costes[c]</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>mb.records</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota: el margen bruto se calcula como ingresos por hectárea (precio por rendimiento) menos costes directospor hectárea. El margen bruto es el beneficio que se obtiene por cada hectárea de cultivo, antes de considerar otros costes fijos o variables adicionales (trabajo, capital).</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>dti.setRecords(<span class="dv">50</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>dtr.setRecords(<span class="dv">1800</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>dag.setRecords(<span class="dv">200</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Indicadores por cultivo </span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>ntr <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;ntr&quot;</span>, domain<span class="op">=</span>[c], description<span class="op">=</span><span class="st">&quot;necesidad de trabajo (h/ha)&quot;</span>, records<span class="op">=</span>dat_ntr.reset_index())</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>nag <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;nag&quot;</span>, domain<span class="op">=</span>[c], description<span class="op">=</span><span class="st">&quot;necesidad de agua de riego (miles m3/ha)&quot;</span>, records<span class="op">=</span>dat_nag.reset_index())</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>precio <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;precio&quot;</span>, domain<span class="op">=</span>[c], description<span class="op">=</span><span class="st">&quot;precio de venta (EUR/ton)&quot;</span>, records<span class="op">=</span>dat_precio.reset_index())</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>rendim <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;rendim&quot;</span>, domain<span class="op">=</span>[c], description<span class="op">=</span><span class="st">&quot;rendimiento (ton/ha)&quot;</span>, records<span class="op">=</span>dat_rendim.reset_index())</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>costes <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;costes&quot;</span>, domain<span class="op">=</span>[c], description<span class="op">=</span><span class="st">&quot;coste directo total (EUR/ha)&quot;</span>, records<span class="op">=</span>dat_costes.reset_index())</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># PARAMETROS calculados </span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Margen bruto del cultivo</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>mb <span class="op">=</span> gp.Parameter(m, name<span class="op">=</span><span class="st">&quot;mb&quot;</span>, domain<span class="op">=</span>[c], description<span class="op">=</span><span class="st">&quot;margen bruto del cultivo&quot;</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculamos mb a partir de los parámetros precio, rendim y costes</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>mb[c] <span class="op">=</span> precio[c]<span class="op">*</span>rendim[c] <span class="op">-</span> costes[c]</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota: el margen bruto se calcula como ingresos por hectárea (precio por rendimiento) menos costes directos por hectárea. </span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos los datos del parámetro mb</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>mb.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
@@ -3235,207 +2681,76 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Más información sobre el uso de parámetos puede encontrarse en la <a href="https://gamspy.readthedocs.io/en/latest/user/basics/parameter.html">parameter section</a> de la guía de usuario.</p>
 </section>
-</section>
-<section id="variables" class="level3" data-number="6.4">
-<h3 data-number="6.4" class="anchored" data-anchor-id="variables"><span class="header-section-number">6.4</span> Variables</h3>
-<p>Las variables GAMSPy se declaran con la palabra clave <code>Variable</code>. Cada <code>Variable</code> tiene un nombre (identificador), un dominio si es necesario, un tipo y, opcionalmente, una descripción.</p>
-<p>Más información sobre variables puede consultarse en la <a href="https://gamspy.readthedocs.io/en/latest/user/basics/variable.html">variable section</a> de la guía de usuario.</p>
-<div id="3f748a7f" class="cell" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables de decisión (superficie de cultivo)</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> gp.Variable(</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;x&quot;</span>,</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>[c],</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">type</span><span class="op">=</span><span class="st">&quot;Positive&quot;</span>,</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;superficie de cultivo (ha)&quot;</span>,</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable objetivo: beneficio de la explotación (siempre tiene que ser de tipo &quot;Free&quot;)</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> gp.Variable(</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;z&quot;</span>,</span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span><span class="va">None</span>,</span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">type</span><span class="op">=</span><span class="st">&quot;Free&quot;</span>,</span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;margen global (eur)&quot;</span>,</span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota: la variable objetivo z tiene que ser de tipo &quot;Free&quot; y no tiene dominio (es una variable escalar, no depende de ningún conjunto).</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="variables-ecuaciones-y-modelo" class="level4" data-number="2.4.2">
+<h4 data-number="2.4.2" class="anchored" data-anchor-id="variables-ecuaciones-y-modelo"><span class="header-section-number">2.4.2</span> Variables, ecuaciones y modelo</h4>
+<p>Definimos las variables:</p>
+<div id="30559aae" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables de decisión (superficie de cultivo)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> gp.Variable(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;x&quot;</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span>[c],</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">type</span><span class="op">=</span><span class="st">&quot;Positive&quot;</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;superficie de cultivo (ha)&quot;</span>,</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable objetivo: beneficio de la explotación (siempre tiene que ser de tipo &quot;Free&quot;)</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> gp.Variable(</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;z&quot;</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    domain<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">type</span><span class="op">=</span><span class="st">&quot;Free&quot;</span>,</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    description<span class="op">=</span><span class="st">&quot;margen global (eur)&quot;</span>,</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota: la variable objetivo z tiene que ser de tipo &quot;Free&quot; y no tiene dominio (es una variable escalar, no depende de ningún conjunto).</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Puesto que las variables de decisión <code>x</code> se han definido como <code>positive</code>, ya estamos teniendo en cuenta las condiciones de no negatividad.</p>
-</section>
-<section id="ecuaciones" class="level3" data-number="6.5">
-<h3 data-number="6.5" class="anchored" data-anchor-id="ecuaciones"><span class="header-section-number">6.5</span> Ecuaciones</h3>
-<p>Una ecuación GAMSPy se declara con la palabra clave <code>Equation</code>. Las ecuaciones deben ser declaradas y formuladas en dos sentencias separadas. Primero debemos declarar la ecuación, utilizando la palabra clave <code>Equation</code> seguida del nombre (identificador), dominio si es necesario y, opcionalmente, una descripción.</p>
-<section id="restricciones-del-modelo" class="level4" data-number="6.5.1">
-<h4 data-number="6.5.1" class="anchored" data-anchor-id="restricciones-del-modelo"><span class="header-section-number">6.5.1</span> Restricciones del modelo</h4>
-<p>El modelo de oferta tiene <em>restricciones de recursos</em> que, en notación algebraica, se escriben:</p>
-<p><span class="math inline">\(\sum_c (n_{cr} \cdot x_c) \le d_r \quad \forall r\)</span></p>
-<p>Para definir estas ecuaciones en GAMSPy, en primer lugar declaramos las ecuaciones:</p>
-<div id="2cd402ce" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos las ecuaciones de restricciones de recursos, con dominio r </span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>RECURSOS <span class="op">=</span> gp.Equation(</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    container<span class="op">=</span>m, name<span class="op">=</span><span class="st">&quot;RECURSOS&quot;</span>, domain<span class="op">=</span>r, description<span class="op">=</span><span class="st">&quot;restricciones de recursos&quot;</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>A continuación, definimos las ecuaciones, incluyendo los siguientes componentes: 1. La variable Python de la <code>Equation</code> a definir 2. El dominio (en su caso) 3. Las condiciones a aplicar al dominio (en su caso) 4. El signo <code>=</code> 5. El lado de la izquierda de la ecuación (LHS) 6. El operador relacional (<code>==</code>, <code>&lt;=</code>, <code>&gt;=</code>) 7. El lado de la derecha de la ecuación (RHS)</p>
-<p>Más información sobre ecuaciones puede encontrarse en la <a href="https://gamspy.readthedocs.io/en/latest/user/basics/equation.html">equation section</a> de la guía de usuario.</p>
-<p>Para las restricciones de recursos, la ecuación se define como sigue:</p>
-<div id="81c555d4" class="cell" data-execution_count="20">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Formulamos las ecuaciones de restricciones de recursos, con dominio r</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>RECURSOS[r] <span class="op">=</span> (gp.Sum(c, nr[c, r] <span class="op">*</span> x[c]) <span class="op">&lt;=</span> dr[r])</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># OjO: utilizar [] para las dimensiones de las variables/parámetros y () para el sumatorio.</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota: es recomendable poner toda la ecuación entre paréntesis ( )</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Comprobamos que la definición de las restricciones de recursos es correcta</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RECURSOS.getDefinition())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>RECURSOS(r) .. sum(c,nr(c,r) * x(c)) =l= dr(r);</code></pre>
-</div>
-</div>
-<p>Las <em>restricciones de no negatividad</em> ya se han tenido en cuenta, puesto que hemos definido la variable <code>x</code> como variable positiva.</p>
-</section>
-</section>
-<section id="función-objectivo" class="level3" data-number="6.6">
-<h3 data-number="6.6" class="anchored" data-anchor-id="función-objectivo"><span class="header-section-number">6.6</span> Función objectivo</h3>
-<p>La <em>función objetivo</em> de un modelo en GAMSPy puede formularse como cualquier otra ecuación. También es posible utilizar directamente la función <code>obj</code>.</p>
-<p>En este ejemplo, formularemos una ecuación denominada <code>MARGEN</code>.</p>
-<div id="31c056f7" class="cell" data-execution_count="21">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Declaración de la función objetivo:</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>MARGEN <span class="op">=</span> gp.Equation(m, name<span class="op">=</span><span class="st">&quot;MARGEN&quot;</span>, description<span class="op">=</span><span class="st">&quot;definicion del margen global&quot;</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Formulación de la función objetivo:</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>MARGEN[...] <span class="op">=</span> (z <span class="op">==</span> gp.Sum(c, mb[c] <span class="op">*</span> x[c]))</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># OjO: utilizar [...] si la ecuación no tiene dimensiones.</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Introducimos las ecuaciones y damos nombre al modelo:</p>
+<div id="c8a9ce69" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ECUACIONES</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>MARGEN <span class="op">=</span> gp.Equation(m, name<span class="op">=</span><span class="st">&quot;MARGEN&quot;</span>, description<span class="op">=</span><span class="st">&quot;definicion del margen global&quot;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>TIERRA <span class="op">=</span> gp.Equation(m, name<span class="op">=</span><span class="st">&quot;TIERRA&quot;</span>, description<span class="op">=</span><span class="st">&quot;restriccion de tierra&quot;</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>TRABAJO <span class="op">=</span> gp.Equation(m, name<span class="op">=</span><span class="st">&quot;TRABAJO&quot;</span>, description<span class="op">=</span><span class="st">&quot;restriccion de trabajo por periodo&quot;</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>AGUA <span class="op">=</span> gp.Equation(m, name<span class="op">=</span><span class="st">&quot;AGUA&quot;</span>, description<span class="op">=</span><span class="st">&quot;restriccion de agua&quot;</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Función objetivo: margen global de la explotación</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>MARGEN[...] <span class="op">=</span> (</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    z <span class="op">==</span> gp.Sum([c], (mb[c] <span class="op">*</span> x[c])) </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Condiciones que deben cumplir las variables (restricciones)</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>TIERRA[...] <span class="op">=</span> (</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    gp.Sum([c], x[c]) <span class="op">&lt;=</span> dti</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>TRABAJO[...] <span class="op">=</span> (</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    gp.Sum([c], ntr[c] <span class="op">*</span> x[c]) <span class="op">&lt;=</span> dtr </span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>AGUA[...] <span class="op">=</span> (</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    gp.Sum([c], nag[c] <span class="op">*</span> x[c]) <span class="op">&lt;=</span> dag</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="co"># MODELO </span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Problema LP; objetivo = Z; sentido = MAX</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>oferta1 <span class="op">=</span> gp.Model(</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    m,</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;oferta1&quot;</span>,</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    equations<span class="op">=</span>[MARGEN, TIERRA, TRABAJO, AGUA],   <span class="co"># incluye las ecuaciones</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    problem<span class="op">=</span><span class="st">&quot;LP&quot;</span>,</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    sense<span class="op">=</span><span class="st">&quot;MAX&quot;</span>,</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    objective<span class="op">=</span>z,                  </span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
-<section id="denominación-y-definición-del-modelo" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="denominación-y-definición-del-modelo"><span class="header-section-number">7</span> Denominación y definición del modelo</h2>
-<p>Un modelo en GAMSPy tiene un nombre (identificador) y engloba una función objetivo, unas restricciones, un sentido (minimize, maximize, feasibility), y un tipo de problema. También está asociado a un <code>Container</code>.</p>
-<p>Para definir el modelo de oferta como un modelo GAMSPy, utilizamos la palabra clave <code>Model</code>, asociamos el modelo a un <code>Container</code> (populado con símbolos y datos), le damos un nombre “oferta”, específicamos las ecuaciones, definimos el tipo como programación lineal (LP), específicamos el sentido de la optimización (<code>Sense.MIN</code>), e indicamos la variable o expresión a optimizar.</p>
-<p>GAMSPy permite dos opciones para asignar ecuaciones a un modelo: 1. Usando la lista de ecuaciones, 2. Usando todas las ecuaciones del archivo con el término <code>m.getEquations()</code>.</p>
-<section id="definición-del-modelo-a-través-de-la-lista-de-ecuaciones" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="definición-del-modelo-a-través-de-la-lista-de-ecuaciones"><span class="header-section-number">7.1</span> Definición del modelo a través de la lista de ecuaciones</h3>
-<p>Es útil si queremos definir varios modelos en el mismo archivo, es decir, si queremos utilizar un subconjunto de las ecuaciones del <code>Container</code>.</p>
-<p>En el modelo de oferta sería:</p>
-<div id="689cc8fd" class="cell" data-execution_count="22">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>modelo1 <span class="op">=</span> gp.Model(</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    m,</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;modelo1&quot;</span>,</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    equations<span class="op">=</span>[RECURSOS,MARGEN],</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    problem<span class="op">=</span><span class="st">&quot;LP&quot;</span>,</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    sense<span class="op">=</span><span class="st">&quot;MAX&quot;</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    objective<span class="op">=</span>z,</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="definición-del-modelo-incluyendo-todas-las-ecuaciones-del-archivo" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="definición-del-modelo-incluyendo-todas-las-ecuaciones-del-archivo"><span class="header-section-number">7.2</span> Definición del modelo incluyendo todas las ecuaciones del archivo</h3>
-<p>Utilizar <code>m.getEquations()</code> es conveniente si queremos incluir todas las ecuaciones del <code>Container</code> en el modelo.</p>
-<p>En el modelo de oferta sería:</p>
-<div id="35329962" class="cell" data-execution_count="23">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>modelo1_bis <span class="op">=</span> gp.Model(</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    m,</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">&quot;modelo1_bis&quot;</span>,</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    equations<span class="op">=</span>m.getEquations(),</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    problem<span class="op">=</span><span class="st">&quot;LP&quot;</span>,</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    sense<span class="op">=</span><span class="st">&quot;MAX&quot;</span>,</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    objective<span class="op">=</span>z,</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Más información sobre el uso de <code>Model</code> puede encontrarse en la <a href="https://gamspy.readthedocs.io/en/latest/user/basics/model.html">model section</a> de la guía de usuario.</p>
-</section>
-</section>
-<section id="resolución-del-modelo" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="resolución-del-modelo"><span class="header-section-number">8</span> Resolución del modelo</h2>
-<section id="comando-solve" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="comando-solve"><span class="header-section-number">8.1</span> Comando <code>solve</code></h3>
-<p>Una vez definido el modelo, está listo para ser resuelto. El comando <code>solve()</code> activa la generación de la instancia específica del modelo, crea estructuras de datos adecuadas para el solucionador e invoca al solucionador. Para ello utilizamos el nombre del modelo seguido de <code>.solve</code>.</p>
-<p>Opcionalmente, para ver el resultado en la consola, podemos utilizar la librería <code>sys</code>, pasando el atributo <code>output=sys.stdout</code> al <code>oferta.solve()</code>.</p>
-<div id="6205b1ef" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-execution_count="24">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutamos el modelo y mostramos los resultados</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>modelo1.solve(output<span class="op">=</span>sys.stdout)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>--- Job _UOub9lAsQm_wOpg9a48FGQ.gms Start 09/14/26 01:32:38 52.5.0 9bc771bf WEX-WEI x86 64bit/MS Windows
---- Applying:
-    C:\agami\bioeco\bio_models\agrimod_vs\.gamspy_venv\Lib\site-packages\gamspy_base\gmsprmNT.txt
---- GAMS Parameters defined
-    LP cplex
-    Input C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQ.gms
-    Output C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQ.lst
-    ScrDir C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\tmpo7o4d8ee\
-    SysDir C:\agami\bioeco\bio_models\agrimod_vs\.gamspy_venv\Lib\site-packages\gamspy_base\
-    LogOption 3
-    Trace C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQ.txt
-    License C:\Users\Maria\Documents\GAMSPy\gamspy_license.txt
-    OptFile 0
-    OptDir C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\
-    LimRow 0
-    LimCol 0
-    TraceOpt 3
-    GDX C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQout.gdx
-    SolPrint 0
-    SolveLink 2
-    PreviousWork 1
-    gdxSymbols newOrChanged
-System information: 12 physical cores and 32 Gb physical memory detected
---- Starting compilation
---- _UOub9lAsQm_wOpg9a48FGQ.gms(71) 4 Mb
---- Starting execution: elapsed 0:00:00.005
---- Generating LP model modelo1
---- _UOub9lAsQm_wOpg9a48FGQ.gms(157) 4 Mb
----   4 rows  3 columns  9 non-zeroes
---- Range statistics (absolute non-zero finite values)
---- RHS       [min, max] : [ 5.000E+01, 1.800E+03] - Zero values observed as well
---- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
---- Matrix    [min, max] : [ 1.000E+00, 1.000E+03]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.018
-
-IBM ILOG CPLEX   52.5.0 9bc771bf Jan 28, 2026          WEI x86 64bit/MS Window
-
---- GAMS/CPLEX licensed for continuous and discrete problems.
---- GMO setup time: 0.00s
---- GMO memory 0.50 Mb (peak 0.50 Mb)
---- Dictionary memory 0.00 Mb
---- Cplex 22.1.2.0 link memory 0.00 Mb (peak 0.00 Mb)
---- Starting Cplex
-
-Version identifier: 22.1.2.0 | 2024-11-25 | 0edbb82fd
-CPXPARAM_Advance                                 0
-CPXPARAM_Simplex_Display                         2
-CPXPARAM_MIP_Display                             4
-CPXPARAM_MIP_Pool_Capacity                       0
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-Tried aggregator 1 time.
-LP Presolve eliminated 0 rows and 1 columns.
-Reduced LP has 3 rows, 2 columns, and 6 nonzeros.
-Presolve time = 0.00 sec. (0.00 ticks)
-
-Iteration      Dual Objective            In Variable           Out Variable
-     1 sI            0.000000                x(maiz) RECURSOS(tierra) slack
-     2           33500.000000               x(trigo)RECURSOS(trabajo) slack
-
---- LP status (1): optimal.
---- Cplex Time: 0.00sec (det. 0.01 ticks)
-
-
-Optimal solution found
-Objective:        33500.000000
-
---- Reading solution for model modelo1
---- Executing after solve: elapsed 0:00:00.083
---- _UOub9lAsQm_wOpg9a48FGQ.gms(216) 4 Mb
---- GDX File C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQout.gdx
-*** Status: Normal completion
---- Job _UOub9lAsQm_wOpg9a48FGQ.gms Stop 09/14/26 01:32:38 elapsed 0:00:00.092</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<section id="resolución-del-modelo-y-parámetro-de-resultados" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="resolución-del-modelo-y-parámetro-de-resultados"><span class="header-section-number">2.5</span> Resolución del modelo y parámetro de resultados</h3>
+<p>Resolvemos el modelo:</p>
+<div id="c32593f2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutamos el modelo </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>oferta1.solve()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
@@ -3471,195 +2786,10 @@ Objective:        33500.000000
 </div>
 </div>
 </div>
-</section>
-<section id="chequeando-el-modelo" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="chequeando-el-modelo"><span class="header-section-number">8.2</span> Chequeando el modelo</h3>
-<p>Las ecuaciones y variables generadas pueden inspeccionarse para verificar la corrección del modelo generado. GAMSPy proporciona <code>getEquationListing</code> y <code>getVariableListing</code> para obtener las ecuaciones y variables generadas.</p>
-<p>Para obtener los listados, primero necesitamos resolver el modelo con opciones de <code>equation_listing_limit</code> y <code>variable_listing_limit</code>.</p>
-<div id="66077e91" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-execution_count="25">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>modelo1.solve(output<span class="op">=</span>sys.stdout, options<span class="op">=</span>gp.Options(equation_listing_limit<span class="op">=</span><span class="dv">10</span>, variable_listing_limit<span class="op">=</span><span class="dv">10</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>--- _UOub9lAsQm_wOpg9a48FGQ.gms(216) 4 Mb
---- Job _UOub9lAsQm_wOpg9a48FGQ.gms Start 09/14/26 01:32:38 52.5.0 9bc771bf WEX-WEI x86 64bit/MS Windows
---- Applying:
-    C:\agami\bioeco\bio_models\agrimod_vs\.gamspy_venv\Lib\site-packages\gamspy_base\gmsprmNT.txt
---- GAMS Parameters defined
-    LP cplex
-    Input C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQ.gms
-    Output C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQ.lst
-    ScrDir C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\tmpo7o4d8ee\
-    SysDir C:\agami\bioeco\bio_models\agrimod_vs\.gamspy_venv\Lib\site-packages\gamspy_base\
-    LogOption 3
-    Trace C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQ.txt
-    License C:\Users\Maria\Documents\GAMSPy\gamspy_license.txt
-    OptFile 0
-    OptDir C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\
-    LimRow 10
-    LimCol 10
-    TraceOpt 3
-    GDX C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQout.gdx
-    SolPrint 0
-    SolveLink 2
-    PreviousWork 1
-    gdxSymbols newOrChanged
-System information: 12 physical cores and 32 Gb physical memory detected
---- Starting compilation
---- _UOub9lAsQm_wOpg9a48FGQ.gms(71) 4 Mb
---- Starting execution: elapsed 0:00:00.005
---- Generating LP model modelo1
---- _UOub9lAsQm_wOpg9a48FGQ.gms(228) 4 Mb
----   4 rows  3 columns  9 non-zeroes
---- Range statistics (absolute non-zero finite values)
---- RHS       [min, max] : [ 5.000E+01, 1.800E+03] - Zero values observed as well
---- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
---- Matrix    [min, max] : [ 1.000E+00, 1.000E+03]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.007
-
-IBM ILOG CPLEX   52.5.0 9bc771bf Jan 28, 2026          WEI x86 64bit/MS Window
-
---- GAMS/CPLEX licensed for continuous and discrete problems.
---- GMO setup time: 0.00s
---- GMO memory 0.50 Mb (peak 0.50 Mb)
---- Dictionary memory 0.00 Mb
---- Cplex 22.1.2.0 link memory 0.00 Mb (peak 0.00 Mb)
---- Starting Cplex
-
-Version identifier: 22.1.2.0 | 2024-11-25 | 0edbb82fd
-CPXPARAM_Advance                                 2
-CPXPARAM_Simplex_Display                         2
-CPXPARAM_MIP_Display                             4
-CPXPARAM_MIP_Pool_Capacity                       0
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-Tried aggregator 1 time.
-LP Presolve eliminated 0 rows and 1 columns.
-Reduced LP has 3 rows, 2 columns, and 6 nonzeros.
-Presolve time = 0.00 sec. (0.00 ticks)
-Using devex.
-
---- LP status (1): optimal.
---- Cplex Time: 0.00sec (det. 0.01 ticks)
-
-
-Optimal solution found
-Objective:        33500.000000
-
---- Reading solution for model modelo1
---- Executing after solve: elapsed 0:00:00.075
---- _UOub9lAsQm_wOpg9a48FGQ.gms(287) 4 Mb
---- GDX File C:\Users\Maria\AppData\Local\Temp\tmp108du7g2\_UOub9lAsQm_wOpg9a48FGQout.gdx
-*** Status: Normal completion
---- Job _UOub9lAsQm_wOpg9a48FGQ.gms Stop 09/14/26 01:32:38 elapsed 0:00:00.088</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="25">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Solver Status</th>
-<th data-quarto-table-cell-role="th">Model Status</th>
-<th data-quarto-table-cell-role="th">Objective</th>
-<th data-quarto-table-cell-role="th">Num of Equations</th>
-<th data-quarto-table-cell-role="th">Num of Variables</th>
-<th data-quarto-table-cell-role="th">Model Type</th>
-<th data-quarto-table-cell-role="th">Solver</th>
-<th data-quarto-table-cell-role="th">Solver Time</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>Normal</td>
-<td>OptimalGlobal</td>
-<td>33500.0</td>
-<td>4</td>
-<td>3</td>
-<td>LP</td>
-<td>CPLEX</td>
-<td>0.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="f27183e4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="26">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ahora podemos chequear las ecuaciones</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(modelo1.getEquationListing())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>RECURSOS(tierra)..  x(trigo) + x(maiz) =L= 50 ; (LHS = 50)
-RECURSOS(trabajo)..  20*x(trigo) + 60*x(maiz) =L= 1800 ; (LHS = 1800)
-RECURSOS(agua)..  2.5*x(trigo) + 5*x(maiz) =L= 200 ; (LHS = 175)
-MARGEN..  - 450*x(trigo) - 1000*x(maiz) + z =E= 0 ; (LHS = 0)</code></pre>
-</div>
-</div>
-<div id="0c22092a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="27">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Podemos chequear las variables</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(modelo1.getVariableListing())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>x(trigo)
-                (.LO, .L, .UP, .M = 0, 30, +INF, 0)
-        1       RECURSOS(tierra)
-       20       RECURSOS(trabajo)
-        2.5     RECURSOS(agua)
-     -450       MARGEN
-
-x(maiz)
-                (.LO, .L, .UP, .M = 0, 20, +INF, 0)
-        1       RECURSOS(tierra)
-       60       RECURSOS(trabajo)
-        5       RECURSOS(agua)
-    -1000       MARGEN
-
-z
-                (.LO, .L, .UP, .M = -INF, 33500, +INF, 0)
-        1       MARGEN
-</code></pre>
-</div>
-</div>
-<div id="4307c177" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="28">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Podemos chequear una ecuación en particular</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(RECURSOS.getEquationListing())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>RECURSOS(tierra)..  x(trigo) + x(maiz) =L= 50 ; (LHS = 50)
-RECURSOS(trabajo)..  20*x(trigo) + 60*x(maiz) =L= 1800 ; (LHS = 1800)
-RECURSOS(agua)..  2.5*x(trigo) + 5*x(maiz) =L= 200 ; (LHS = 175)</code></pre>
-</div>
-</div>
-<div id="d744c148" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="29">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Podemos chequear una variable en particular</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x.getVariableListing())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>x(trigo)
-                (.LO, .L, .UP, .M = 0, 30, +INF, 0)
-        1       RECURSOS(tierra)
-       20       RECURSOS(trabajo)
-        2.5     RECURSOS(agua)
-     -450       MARGEN
-
-x(maiz)
-                (.LO, .L, .UP, .M = 0, 20, +INF, 0)
-        1       RECURSOS(tierra)
-       60       RECURSOS(trabajo)
-        5       RECURSOS(agua)
-    -1000       MARGEN
-</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="análisis-de-resultados-del-modelo" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="análisis-de-resultados-del-modelo"><span class="header-section-number">9</span> Análisis de resultados del modelo</h2>
-<section id="valores-de-las-variables-de-decisión" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="valores-de-las-variables-de-decisión"><span class="header-section-number">9.1</span> Valores de las variables de decisión</h3>
-<p>Los valores de las variables en la solución del modelo pueden obtenerse utilizando <code>&lt;variable name&gt;.records</code>.</p>
-<p>El <code>level</code> indica el nivel en la solución. Otros atributos de las variables son el valor marginal, los límiter inferior y superior y el factor de escalado.</p>
-<div id="fe797681" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}}" data-execution_count="30">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>x.records.set_index([<span class="st">&quot;c&quot;</span>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="30">
+<p>Analizamos los resultados (valores de las variables de decisión y de la función objetivo):</p>
+<div id="e8fe7fa9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}}" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>x.records.set_index([<span class="st">&quot;c&quot;</span>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 
 
@@ -3705,25 +2835,9 @@ x(maiz)
 </div>
 </div>
 </div>
-</section>
-<section id="valor-óptimo-de-la-variable-objetivo" class="level3" data-number="9.2">
-<h3 data-number="9.2" class="anchored" data-anchor-id="valor-óptimo-de-la-variable-objetivo"><span class="header-section-number">9.2</span> Valor óptimo de la variable objetivo</h3>
-<p>El óptimo de la función objetivo puede obtenerse utilizando <code>&lt;model name&gt;.objective_value</code>.</p>
-<div id="fc23d5dc" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="31">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>modelo1.objective_value</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota: también podemos ver el óptimo de la función objetivo mostrando la variable z: z.records</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="31">
-<pre><code>33500.0</code></pre>
-</div>
-</div>
-</section>
-<section id="valores-de-las-restricciones-de-recursos" class="level3" data-number="9.3">
-<h3 data-number="9.3" class="anchored" data-anchor-id="valores-de-las-restricciones-de-recursos"><span class="header-section-number">9.3</span> Valores de las restricciones de recursos</h3>
-<p>También es importante analizar los valores de las restricciones de recursos en la solución del modelo, tanto los niveles de uso de recursos como los valores marginales de los recursos.</p>
-<div id="30864297" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:175}}" data-execution_count="32">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>RECURSOS.records.set_index([<span class="st">&quot;r&quot;</span>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div id="966d517a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>z.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 
 
@@ -3737,36 +2851,109 @@ x(maiz)
 <th data-quarto-table-cell-role="th">upper</th>
 <th data-quarto-table-cell-role="th">scale</th>
 </tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">r</th>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>33500.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>inf</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Analizamos los valores de las restricciones de recursos en la solución del modelo, tanto los niveles de uso de recursos como los valores marginales de los recursos.</p>
+<div id="b5b73ac8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:175}}" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>TIERRA.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">level</th>
+<th data-quarto-table-cell-role="th">marginal</th>
+<th data-quarto-table-cell-role="th">lower</th>
+<th data-quarto-table-cell-role="th">upper</th>
+<th data-quarto-table-cell-role="th">scale</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">tierra</th>
+<th data-quarto-table-cell-role="th">0</th>
 <td>50.0</td>
-<td>175.00</td>
+<td>175.0</td>
 <td>-inf</td>
 <td>50.0</td>
 <td>1.0</td>
 </tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">trabajo</th>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="ef5678bf" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>TRABAJO.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">level</th>
+<th data-quarto-table-cell-role="th">marginal</th>
+<th data-quarto-table-cell-role="th">lower</th>
+<th data-quarto-table-cell-role="th">upper</th>
+<th data-quarto-table-cell-role="th">scale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
 <td>1800.0</td>
 <td>13.75</td>
 <td>-inf</td>
 <td>1800.0</td>
 <td>1.0</td>
 </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="0484acdf" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>AGUA.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">level</th>
+<th data-quarto-table-cell-role="th">marginal</th>
+<th data-quarto-table-cell-role="th">lower</th>
+<th data-quarto-table-cell-role="th">upper</th>
+<th data-quarto-table-cell-role="th">scale</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">agua</th>
+<th data-quarto-table-cell-role="th">0</th>
 <td>175.0</td>
-<td>0.00</td>
+<td>0.0</td>
 <td>-inf</td>
 <td>200.0</td>
 <td>1.0</td>
@@ -3777,31 +2964,26 @@ x(maiz)
 </div>
 </div>
 </div>
-<p>El <em>valor marginal de un recurso</em> limitado, también denominado valor dual o precio sombra, representa el valor interno del recurso en el margen (valor de la última unidad utilizada en la solución del modelo). Puede interpretarse como el cambio que experimentaría el valor de la variable objetivo si la disponibilidad de recurso aumenta en una unidad (manteniéndose constantes el resto de condiciones del modelo). Es decir, puede interpretarse como el precio máximo que el productor (dada la solución óptima) estaría dispuesto a pagar por disponer de una unidad adicional del recurso.</p>
-<p>Los recursos utilizados en su totalidad tienen un valor marginal positivo. En la solución óptima, se utiliza toda la tierra y todo el trabajo disponibles. El valor marginal de la tierra es de 175 eur/ha y el valor marginal del trabajo es de 13.75 eur/hora. Disponer de una hectárea de tierra adicional permitiría al agricultor incrementar el beneficio en 175 euros (en la nueva solución óptima).</p>
-<p>Los recursos que no se utilizan en su totalidad, tienen un valor marginal nulo. En la solución óptima, se utilizan 175000 de los 200000 m<sup>3</sup> disponibles. Por consiguiente, el valor marginal del agua es cero. Disponer de 1000 m<sup>3</sup> adicionales no tendría ningún efecto en la variable objetivo.</p>
-<p><span style="font-weight: 600;">💡 Para pensar:</span></p>
-<ol type="1">
-<li>Compara los márgenes brutos de cada cultivo. ¿Por qué el modelo no destina el 100% de la tierra al cultivo que ofrece más margen por hectárea (maíz)? Argumenta qué recursos son limitantes e impiden cultivar toda la superficie de maíz.</li>
-<li>Revisa los valores marginales (duales) de las restricciones de recursos. Si el agricultor tuviese la oportunidad de contratar trabajo asalariado al precio de 15 euros por hora de trabajo, ¿debería contratarlo?</li>
-</ol>
-</section>
-<section id="parámetros-de-resultados" class="level3" data-number="9.4">
-<h3 data-number="9.4" class="anchored" data-anchor-id="parámetros-de-resultados"><span class="header-section-number">9.4</span> Parámetros de resultados</h3>
-<p>Podemos crear parámetros para extraer y visualizar los resultados que nos interesen.</p>
-<div id="be18f071" class="cell" data-execution_count="33">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># RESULTADOS (plan de producción y uso de recursos)</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>modelo1_resultados <span class="op">=</span> gp.Parameter(container<span class="op">=</span>m, name<span class="op">=</span><span class="st">&quot;modelo1_resultados&quot;</span>, domain<span class="op">=</span>[<span class="st">&quot;*&quot;</span>,<span class="st">&quot;*&quot;</span>,<span class="st">&quot;*&quot;</span>])</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>modelo1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,r,c] <span class="op">=</span> nr[c,r] <span class="op">*</span> x.l[c]</span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>modelo1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,r,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> gp.Sum(c, nr[c, r] <span class="op">*</span> x.l[c])</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>modelo1_resultados[<span class="st">&quot;Valor_marginal&quot;</span>,r,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> RECURSOS.m[r]</span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>modelo1_resultados[<span class="st">&quot;Margen&quot;</span>,<span class="st">&quot;global&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> z.l</span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>modelo1_resultados[<span class="st">&quot;Margen&quot;</span>,<span class="st">&quot;porha&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> z.l<span class="op">/</span>gp.Sum(c, x.l[c])</span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co"># verificar que se han guardado los resultados en el parámetro de resultados</span></span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>modelo1_resultados.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="33">
+<p>Podemos crear un parámetro para extraer y visualizar los resultados que nos interesen.</p>
+<div id="65442636" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># RESULTADOS (plan de producción y uso de recursos)</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>oferta1_resultados <span class="op">=</span> gp.Parameter(container<span class="op">=</span>m, name<span class="op">=</span><span class="st">&quot;oferta1_resultados&quot;</span>, domain<span class="op">=</span>[<span class="st">&quot;*&quot;</span>,<span class="st">&quot;*&quot;</span>,<span class="st">&quot;*&quot;</span>])</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,<span class="st">&quot;tierra&quot;</span>,c] <span class="op">=</span>  x.l[c]</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,<span class="st">&quot;trabajo&quot;</span>,c] <span class="op">=</span> ntr[c] <span class="op">*</span> x.l[c]</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,<span class="st">&quot;agua&quot;</span>,c] <span class="op">=</span> nag[c] <span class="op">*</span> x.l[c]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,<span class="st">&quot;tierra&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> gp.Sum(c, x.l[c])</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,<span class="st">&quot;trabajo&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> gp.Sum(c, ntr[c] <span class="op">*</span> x.l[c])</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Uso_recurso&quot;</span>,<span class="st">&quot;agua&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> gp.Sum(c, nag[c] <span class="op">*</span> x.l[c])</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Valor_marginal&quot;</span>,<span class="st">&quot;tierra&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> TIERRA.m</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Valor_marginal&quot;</span>,<span class="st">&quot;trabajo&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> TRABAJO.m</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Valor_marginal&quot;</span>,<span class="st">&quot;agua&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> AGUA.m</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Margen&quot;</span>,<span class="st">&quot;global&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> z.l</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>oferta1_resultados[<span class="st">&quot;Margen&quot;</span>,<span class="st">&quot;porha&quot;</span>,<span class="st">&quot;total&quot;</span>] <span class="op">=</span> z.l<span class="op">/</span>gp.Sum(c, x.l[c])</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co"># verificar que se han guardado los resultados en el parámetro de resultados</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>oferta1_resultados.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 
 
@@ -3914,102 +3096,12 @@ x(maiz)
 </div>
 </div>
 </section>
-<section id="interpretación-de-valores-marginales" class="level3" data-number="9.5">
-<h3 data-number="9.5" class="anchored" data-anchor-id="interpretación-de-valores-marginales"><span class="header-section-number">9.5</span> Interpretación de valores marginales</h3>
-<p>Podemos realizar cambios en el modelo para comprender mejor el significado de los valores marginales de los recursos. Por ejemplo, podemos hacer una simulación incrementando la disponibilidad de tierra en una unidad.</p>
-<p>Siempre es preferible realizar las simulaciones sin modificar los datos originales del modelo, de forma que podamos comparar resultados antes y después del cambio y que podamos volver a utilizar los datos originales.</p>
-<p>En nuestro ejemplo:</p>
-<div id="52e00a4e" class="cell" data-execution_count="34">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Redefinimos el valor del parámetro de disponibilidad de recursos, solo para el recurso &quot;tierra&quot;, de 50 a 51 ha</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>dr[<span class="st">&quot;tierra&quot;</span>] <span class="op">=</span> <span class="dv">51</span></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Volvemos a ejecutar el modelo para ver cómo cambia la solución óptima:</span></span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>modelo1.solve()</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos los resultados de la variable de decisión x (superficie de cultivo) </span></span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>x.records.set_index([<span class="st">&quot;c&quot;</span>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="34">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">level</th>
-<th data-quarto-table-cell-role="th">marginal</th>
-<th data-quarto-table-cell-role="th">lower</th>
-<th data-quarto-table-cell-role="th">upper</th>
-<th data-quarto-table-cell-role="th">scale</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">c</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">trigo</th>
-<td>31.5</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>inf</td>
-<td>1.0</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">maiz</th>
-<td>19.5</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>inf</td>
-<td>1.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="97d2c480" class="cell" data-execution_count="35">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizamos el resultado de la variable objetivo z (beneficio) </span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>z.records</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">level</th>
-<th data-quarto-table-cell-role="th">marginal</th>
-<th data-quarto-table-cell-role="th">lower</th>
-<th data-quarto-table-cell-role="th">upper</th>
-<th data-quarto-table-cell-role="th">scale</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>33675.0</td>
-<td>0.0</td>
-<td>-inf</td>
-<td>inf</td>
-<td>1.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>En la nueva solución del modelo, la variable objetivo ha aumentado exactamente en 175 euros.</p>
-<p>Es importante tener en cuenta que el valor marginal de los recursos cambia cuando cambian las condiciones (siempre debe interpretarse como valor <em>en el margen</em>).</p>
 </section>
+<section id="definición-y-formulación-matemática-del-modelo-oferta2" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="definición-y-formulación-matemática-del-modelo-oferta2"><span class="header-section-number">3</span> Definición y formulación matemática del modelo <code>oferta2</code></h2>
+</section>
+<section id="definición-y-formulación-matemática-del-modelo-oferta3" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="definición-y-formulación-matemática-del-modelo-oferta3"><span class="header-section-number">4</span> Definición y formulación matemática del modelo <code>oferta3</code></h2>
 </section>
 
 </main>
